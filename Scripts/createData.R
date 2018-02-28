@@ -79,7 +79,7 @@ metroPop <- rbind(metroEast, metroWest)
 
 
 ### re-project from NAD 1983 to Missouri State Plane East
-medianAge <- st_transform(medianAge, 102696)
+metroPop <- st_transform(metroPop, 32615)
 
 ### write shapefile
-st_write(medianAge, here("Shapefile", "SLM_DEMOS_CountiesPop.shp"), delete_dsn = TRUE)
+st_write(metroPop, here("Shapefile", "SLM_DEMOS_CountiesPop.shp"))
